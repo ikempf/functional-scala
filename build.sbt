@@ -29,7 +29,6 @@ scalacOptions ++= Seq(
   , "-Xverify"
   , "-feature"
   ,"-Ypartial-unification"
-  ,"-Xfatal-warnings"
   , "-language:_"
 )
 
@@ -49,7 +48,8 @@ libraryDependencies ++= Seq(
   "org.scalaz"      %% "scalaz-core"        % ScalaZVersion,
   "org.scalaz"      %% "scalaz-zio"         % ZIOVersion,
   "org.scalaz"      %% "scalaz-zio-interop" % ZIOVersion,
-  // Ammonite
+  "io.monix" %% "monix" % "3.0.0-RC1",
+// Ammonite
   "com.lihaoyi"     %  "ammonite"           % "1.1.2"   % "test" cross CrossVersion.full
 )
 
